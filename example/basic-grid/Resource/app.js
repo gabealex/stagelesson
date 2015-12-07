@@ -8,11 +8,11 @@ Stage(function(stage) {
 
   var j = 0, i = 0;
   var column = Stage.column().appendTo(stage).pin('align', 0.5).spacing(1);
-  for (j = 0; j < 15; j++) {
+  for (j = 0; j < 9; j++) {
     var row = Stage.row().appendTo(column).spacing(1);
-    for (i = 0; i < 15; i++) {
+    for (i = 0; i < 9; i++) {
       // colors as frames
-      var cell = Stage.anim('rainbow').appendTo(row).pin('pivot', 10);
+      var cell = Stage.anim('rainbow').appendTo(row).pin('pivot', 0.5);
       cell.on(Mouse.MOVE, function(point) {
         if (this != last) {
           last = this;
